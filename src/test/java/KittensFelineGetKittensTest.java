@@ -8,14 +8,14 @@ import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 
-public class KittensGetKittensTest {
+public class KittensFelineGetKittensTest {
     private final int expectedResult;
     private final int kittensQuantity;
 
 
     Feline feline = new Feline();
 
-    public KittensGetKittensTest(int kittensQuantity, int expectedResult) {
+    public KittensFelineGetKittensTest(int kittensQuantity, int expectedResult) {
         this.expectedResult = expectedResult;
         this.kittensQuantity = kittensQuantity;
 
@@ -27,6 +27,7 @@ public class KittensGetKittensTest {
                 {2, 2},
                 {8, 8},
                 {4, 4},
+                {0, 0},
         };
     }
 

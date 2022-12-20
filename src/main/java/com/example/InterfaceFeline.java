@@ -1,2 +1,5 @@
-package com.example;public interface InterfaceFeline {
+package com.example;
+
+public interface InterfaceFeline {
+    int getKittens();
 }
