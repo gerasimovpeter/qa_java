@@ -1,10 +1,10 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.junit.Assert;
-import com.example.InterfaceFeline;
 
 import java.util.List;
 
@@ -12,12 +12,12 @@ import static org.junit.Assert.*;
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
     @Mock
-    InterfaceFeline feline;
+    Feline feline;
 
 
     @Test
     public void lionFoodIsMeatTest() throws Exception {
-        Lion lion = new Lion("Самец", feline);
+        Lion lion = new Lion("Самец", new Feline());
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expectedResult, lion.getFood());
     }
@@ -42,7 +42,7 @@ public class LionTest {
     }
     @Test
     public void getKittensTest() throws Exception {
-        Lion lion = new Lion("Самец", feline);
+        Lion lion = new Lion("Самец", new Feline());
         int expectedResult = 1;
         assertEquals(expectedResult, lion.getKittens());
     }
